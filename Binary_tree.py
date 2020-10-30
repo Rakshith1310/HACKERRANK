@@ -28,8 +28,8 @@ class Tree:
                 while pnt.left!=None:
                     pnt = pnt.left
                 node.data = pnt.data
-                node.right = self.deleteNode(root.right, root.data)
+                node.right = self.deleteNode(node.right, node.data)
             if data<node.data:
-                root.left = deleteNode(root.left, data)
+                node.left = deleteNode(node.left, data)
             else:
-                root.right = deleteNode(root.right, data)
+                node.right = deleteNode(node.right, data)
